@@ -11,7 +11,7 @@ formEl.addEventListener("submit", (e) => {
 });
 
 async function getPokemon(name = "bulbasaur") {
-    const res= await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    const res= await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`);
     const pokemon = await res.json();
     console.log(pokemon);
 
